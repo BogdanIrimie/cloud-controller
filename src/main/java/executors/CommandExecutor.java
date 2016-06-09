@@ -7,15 +7,15 @@ import java.lang.reflect.Field;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class CommandExecutor
-{
+/**
+ * Executes commands in terminal.
+ */
+public class CommandExecutor {
     private static final Logger logger = LoggerFactory.getLogger(CommandExecutor.class);
 
-    public String execute(String command)
-    {
+    public String execute(String command) {
         StringBuilder commandOutput = new StringBuilder();
-        try
-        {
+        try {
             Process process = Runtime.getRuntime().exec(command);
 
             Field pid = process.getClass().getDeclaredField("pid");
@@ -29,18 +29,16 @@ public class CommandExecutor
             process.exitValue();
             process.destroy();
         }
-        catch (IOException e)
-        {
+        catch (IOException e) {
             logger.error(e.getMessage(), e);
         }
-        catch (InterruptedException e)
-        {
+        catch (InterruptedException e) {
             logger.error(e.getMessage(), e);
         }
-        catch (NoSuchFieldException e)
-        {
+        catch (NoSuchFieldException e) {
             logger.error(e.getMessage(), e);
         }
+
         logger.info("Command output:\n" + commandOutput.toString());
         return commandOutput.toString();
     }
