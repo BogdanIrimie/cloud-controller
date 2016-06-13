@@ -1,0 +1,5 @@
+// Create instance 
+gcloud compute instances create toy-instance2 \
+    --image-family ubuntu-1604-lts \
+    --image-project ubuntu-os-cloud \
+    --preemptible
