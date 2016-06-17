@@ -6,11 +6,14 @@ import dto.ProgramArguments;
  * Construct commands that will be executed by gcloud
  */
 public class CommandConstructor {
+    public static final String pvmTemplate = "pvm-ubunut-http-short";
+    public static final String vmTemplate = "vm-ubunut-http-short";
+
     public static String createPreemptiveInstanceGroup(String uuid) {
         return "gcloud compute instance-groups managed create pvm-" + uuid + " " +
                 "--base-instance-name pvm-" + uuid + " " +
                 "--size " + ProgramArguments.getPreemptiveVmNumber() + " " +
-                "--template pvm-ubunut-http";
+                "--template " + pvmTemplate;
     }
 
     public static String createPreemptiveAutoScaling(String uuid) {
@@ -23,7 +26,7 @@ public class CommandConstructor {
         return "gcloud compute instance-groups managed create vm-" + uuid + " " +
                 "--base-instance-name vm-" + uuid + " " +
                 "--size " + ProgramArguments.getVmNumber() + " " +
-                "--template vm-ubunut-http";
+                "--template " + vmTemplate;
     }
 
     public static String createAutoScaling(String uuid) {
