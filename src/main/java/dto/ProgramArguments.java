@@ -17,7 +17,7 @@ public class ProgramArguments {
     }
 
     public static void setPreemptiveVmNumber(int preemptiveVmNumber) {
-        preemptiveVmNumber = preemptiveVmNumber;
+        ProgramArguments.preemptiveVmNumber = preemptiveVmNumber;
     }
 
     public static int getPreemptiveVmMinNumber() {
@@ -25,7 +25,7 @@ public class ProgramArguments {
     }
 
     public static void setPreemptiveVmMinNumber(int preemptiveVmMinNumber) {
-        preemptiveVmMinNumber = preemptiveVmMinNumber;
+        ProgramArguments.preemptiveVmMinNumber = preemptiveVmMinNumber;
     }
 
     public static int getPreemptiveVMMaxNumber() {
@@ -33,7 +33,7 @@ public class ProgramArguments {
     }
 
     public static void setPreemptiveVMMaxNumber(int preemptiveVMMaxNumber) {
-        preemptiveVMMaxNumber = preemptiveVMMaxNumber;
+        ProgramArguments.preemptiveVMMaxNumber = preemptiveVMMaxNumber;
     }
 
     public static int getVmNumber() {
@@ -41,7 +41,7 @@ public class ProgramArguments {
     }
 
     public static void setVmNumber(int vmNumber) {
-        vmNumber = vmNumber;
+        ProgramArguments.vmNumber = vmNumber;
     }
 
     public static int getVmMinNumber() {
@@ -49,7 +49,7 @@ public class ProgramArguments {
     }
 
     public static void setVmMinNumber(int vmMinNumber) {
-        vmMinNumber = vmMinNumber;
+        ProgramArguments.vmMinNumber = vmMinNumber;
     }
 
     public static int getVmMaxNumber() {
@@ -57,6 +57,7 @@ public class ProgramArguments {
     }
 
     public static void setVmMaxNumber(int vmMaxNumber) {
-        vmMaxNumber = vmMaxNumber;
+        ProgramArguments.vmMaxNumber = vmMaxNumber;
     }
+
 }
