@@ -1,5 +1,5 @@
-# cloud-controller
-A cloud controller that is able to start preemptive virtual machines and virtual machines in order to reduce cost and offer QoS guarantees.
+# gCloudController
+gCloudController is a cloud controller / manager that is able to start preemptive virtual machines and virtual machines in order to reduce cost and offer QoS guarantees.
 
 ## Installation
 In order to build and run controller you will need:
